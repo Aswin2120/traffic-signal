@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: url(image/bus-stop-with-bench-city-background_43633-11872.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #mydiv{
+        background-color: rgb(56, 56, 56);
+        border-radius: 50px;
+        width: 200px;
+        height: 400px;
+        gap: 5px solid;
+        /* padding: 10px; */
+        padding-top: 10px;
+        /* margin: 10px; */
+        margin-bottom: 10px;
+        
+    }
+    .red{
+        
+        margin-bottom: 30px;
+        border-radius: 90px;
+        width: 100px;
+        height: 100px;
+        background-color: aliceblue;
+        margin-left: 10px;
+        gap: 5px;
+        box-shadow: 1px 1px 10px 10px;
+    }
+    .yellow{
+        margin-bottom: 30px;
+        border-radius: 90px;
+        width: 100px;
+        height: 100px;
+        background-color: aliceblue;
+        margin-left: 10px;
+        gap: 5px;
+        box-shadow: 1px 1px 10px 10px;
+    }
+    .green{
+        border-radius: 90px;
+        width: 100px;
+        height: 100px;
+        background-color: aliceblue;
+        margin-left: 10px;
+        gap: 5px;
+        box-shadow: 1px 1px 10px 10px;
+    }
+    /* .car{
+        width: 200px;
+        height: 100px;
+        text-align: center;
+        background-color: aquamarine;
+        position: relative;
+    } */
+    .car{
+        width: 600px;
+        height: 550px;
+        position: relative;
+        padding: 5px;
+        margin: 10px;
+    }
+
+</style>
+<body>
+    <h1>traffic signal</h1>
+    <center>
+    <div id="mydiv">
+        
+        <div class="red"><img src="image/stop-151342_1280.png" alt="stop" style="width: 100px;"></div>
+        <div class="yellow"></div>
+        <div class="green"><img src="image/png-clipart-walking-sign-others-angle-text-removebg-preview.png" alt="go" style="width: 100px; height: 100px;"></div>
+    </div>
+    <button class="stop" style="border-radius: 50px; background-color: red;">stop</button>
+    <button class="start" style="border-radius: 50px; background-color: yellow;">start</button>
+    <button class="go" style="border-radius: 50px; background-color: green;" >go</button><br><br></center>
+    <!-- moment -->
+     <div>
+        <img src="image/automobile-1300467_1280.png" alt="car" class="car">
+     </div>
+     <!-- <img src="image/bicycle-384566_1920-removebg-preview.png" alt="bicycle" class="bicycle"> -->
+
+    <script>
+        // jQuery
+        $(document).ready(function(){
+            $(".stop").click(function(){
+                $(".red").css("backgroundColor","red")
+                $(".yellow").css("backgroundColor","")
+                $(".green").css("backgroundColor","")
+                // $(".car").stop();
+                $(".car").stop()
+
+            })
+            $(".start").click(function(){
+                $(".yellow").css("backgroundColor","yellow")
+                $(".red").css("backgroundColor","")
+                $(".green").css("backgroundColor","")
+                // $(".car").animate({left:"0"})
+                $(".car").animate({left:"5%"},4000)
+
+            })
+            $(".go").click(function(){
+                $(".green").css("backgroundColor","green")
+                $(".yellow").css("backgroundColor","")
+                $(".red").css("backgroundColor","")
+                // $(".car").animate({left:"105%"},2000)
+                $(".car").animate({left:"100%"},3000)
+            })
+        })
+    </script>
+</body>
+</html>
